@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Upriff!</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { font-size: 16px; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: #1E2A4A;
+      background-color: #F8FAFB;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    nav {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(30, 42, 74, 0.1);
+      padding: 1rem 0;
+    }
+    .nav-inner {
+      max-width: 760px; margin: 0 auto; padding: 0 1.5rem;
+      display: flex; justify-content: center; align-items: center;
+    }
+    .logo {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.5rem; font-weight: 700; text-decoration: none;
+    }
+    .logo .logo-up {
+      color: #1E2A4A;
+    }
+    .logo .logo-riff {
+      color: #E8634A;
+    }
+    .logo span:not(.logo-up):not(.logo-riff) { color: #E8634A; }
+    .success-wrapper {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 1.5rem;
+    }
+    .success-card {
+      max-width: 560px;
+      text-align: center;
+    }
+    .success-icon {
+      width: 80px; height: 80px;
+      background: #E8634A;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 2rem;
+      font-size: 2.5rem;
+      color: #fff;
+    }
+    .success-card h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.75rem, 4vw, 2.25rem);
+      font-weight: 700;
+      color: #1E2A4A;
+      margin-bottom: 1rem;
+    }
+    .success-card h1 em {
+      font-style: normal;
+      color: #E8634A;
+    }
+    .success-card .lead {
+      font-size: 1.125rem;
+      color: #4B5563;
+      margin-bottom: 2.5rem;
+      line-height: 1.7;
+    }
+    .next-steps {
+      background: #F3F4F6;
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: left;
+      margin-bottom: 2.5rem;
+    }
+    .next-steps h2 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #1E2A4A;
+      margin-bottom: 1.25rem;
+    }
+    .next-steps ol {
+      margin: 0 0 0 1.25rem;
+      color: #4B5563;
+      font-size: 0.9375rem;
+    }
+    .next-steps li {
+      margin-bottom: 0.75rem;
+      line-height: 1.6;
+    }
+    .next-steps li strong {
+      color: #1E2A4A;
+    }
+    .btn-home {
+      display: inline-block;
+      color: #1E2A4A;
+      font-size: 0.9375rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .btn-home:hover { color: #152240; }
+    footer {
+      background: #1E2A4A;
+      color: rgba(255, 255, 255, 0.6);
+      padding: 2rem 0;
+      text-align: center;
+    }
+    footer p { font-size: 0.8125rem; color: rgba(255, 255, 255, 0.4); }
+    footer a { color: rgba(255, 255, 255, 0.6); text-decoration: none; }
+    footer a:hover { color: #fff; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="logo"><span class="logo-up">Up</span><span class="logo-riff">riff</span><span>.</span><sup style="font-size:0.45em;vertical-align:super;color:#9CA3AF">&trade;</sup></a>
+    </div>
+  </nav>
+
+  <div class="success-wrapper">
+    <div class="success-card">
+      <div class="success-icon">&#10003;</div>
+      <h1>Welcome to <em>Upriff</em></h1>
+      <p class="lead">Your payment was successful and your subscription is now active. We're excited to get your marketing moving.</p>
+
+      <div class="next-steps">
+        <h2>What happens next</h2>
+        <ol>
+          <li><strong>Check your email</strong> — You'll receive a welcome message with a link to complete your onboarding intake form.</li>
+          <li><strong>Complete the intake form</strong> — Tell us about your business, brand voice, and goals. This takes about 10 minutes.</li>
+          <li><strong>Book your onboarding call</strong> — We'll walk through your brand together and set everything up. You'll receive a booking link in your welcome email.</li>
+          <li><strong>Your first content</strong> — Within days of your onboarding call, your first batch of content will be in the works.</li>
+        </ol>
+      </div>
+
+      <a href="/" class="btn-home">&larr; Back to upriff.io</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container" style="max-width:760px;margin:0 auto;padding:0 1.5rem;">
+      <p>&copy; 2026 Profit Now Solutions, LLC. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

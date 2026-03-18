@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upriff — One-Pager</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Print-optimized: US Letter 8.5x11" */
+    @page {
+      size: letter;
+      margin: 0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      color: #1E2A4A;
+      background: #fff;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .page {
+      width: 8.5in;
+      min-height: 10.5in;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* ---- FRONT SIDE ---- */
+
+    .front {
+      padding: 0.6in 0.65in 0.5in;
+      display: flex;
+      flex-direction: column;
+      min-height: 10.5in;
+      page-break-after: always;
+    }
+
+    /* Header */
+    .front-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.4in;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 24pt;
+      font-weight: 700;
+    }
+
+    .logo .logo-up { color: #1E2A4A; }
+    .logo .logo-riff { color: #E8634A; }
+    .logo .dot { color: #E8634A; }
+    .logo .tm {
+      font-size: 9pt;
+      vertical-align: super;
+      color: #6B7280;
+    }
+
+    .tagline-pill {
+      background: #F3F4F6;
+      color: #1E2A4A;
+      font-size: 8pt;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 100px;
+      letter-spacing: 0.03em;
+    }
+
+    /* Hero block */
+    .front-hero {
+      text-align: center;
+      margin-bottom: 0.35in;
+    }
+
+    .front-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28pt;
+      font-weight: 700;
+      color: #1E2A4A;
+      line-height: 1.15;
+      margin-bottom: 8px;
+    }
+
+    .front-hero h1 em {
+      font-style: normal;
+      color: #E8634A;
+    }
+
+    .front-hero p {
+      font-size: 10.5pt;
+      color: #4B5563;
+      max-width: 5.5in;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+
+    /* Pain points */
+    .pain-section {
+      margin-bottom: 0.3in;
+    }
+
+    .section-label {
+      font-size: 8pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #E8634A;
+      margin-bottom: 8px;
+    }
+
+    .pain-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .pain-card {
+      background: #F8FAFB;
+      border: 1px solid #E5E7EB;
+      border-radius: 8px;
+      padding: 12px 14px;
+    }
+
+    .pain-card h3 {
+      font-size: 9pt;
+      font-weight: 700;
+      color: #1E2A4A;
+      margin-bottom: 4px;
+    }
+
+    .pain-card p {
+      font-size: 9pt;
+      color: #4B5563;
+      line-height: 1.45;
+    }
+
+    /* What's included */
+    .included-section {
+      margin-bottom: 0.3in;
+    }
+
+    .included-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .included-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .included-check {
+      width: 16px;
+      height: 16px;
+      min-width: 16px;
+      background: #FEF2EF;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+
+    .included-check svg {
+      width: 10px;
+      height: 10px;
+    }
+
+    .included-text h4 {
+      font-size: 8.5pt;
+      font-weight: 600;
+      color: #1E2A4A;
+      margin-bottom: 1px;
+    }
+
+    .included-text p {
+      font-size: 9pt;
+      color: #6B7280;
+      line-height: 1.35;
+    }
+
+    /* How it works */
+    .how-section {
+      margin-bottom: 0.3in;
+    }
+
+    .how-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .how-step {
+      text-align: center;
+    }
+
+    .step-circle {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #E8634A;
+      color: #fff;
+      font-family: 'Playfair Display', serif;
+      font-size: 14pt;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 6px;
+    }
+
+    .how-step h4 {
+      font-size: 8.5pt;
+      font-weight: 600;
+      color: #1E2A4A;
+      margin-bottom: 2px;
+    }
+
+    .how-step p {
+      font-size: 9pt;
+      color: #4B5563;
+      line-height: 1.4;
+    }
+
+    /* Pricing bar */
+    .pricing-bar {
+      background: #1E2A4A;
+      border-radius: 10px;
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.25in;
+    }
+
+    .pricing-plan {
+      text-align: center;
+      flex: 1;
+    }
+
+    .pricing-plan h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 11pt;
+      color: #fff;
+      margin-bottom: 2px;
+    }
+
+    .pricing-plan .price {
+      font-size: 18pt;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .pricing-plan .price span {
+      font-size: 9pt;
+      font-weight: 400;
+      color: rgba(255,255,255,0.7);
+    }
+
+    .pricing-plan .desc {
+      font-size: 8pt;
+      color: rgba(255,255,255,0.7);
+      margin-top: 2px;
+    }
+
+    .pricing-divider {
+      width: 1px;
+      height: 48px;
+      background: rgba(255,255,255,0.2);
+      margin: 0 16px;
+    }
+
+    .pricing-addon {
+      text-align: center;
+      flex: 1;
+    }
+
+    .pricing-addon h4 {
+      font-size: 9pt;
+      font-weight: 600;
+      color: #E8634A;
+    }
+
+    .pricing-addon .price {
+      font-size: 14pt;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .pricing-addon .price span {
+      font-size: 8pt;
+      font-weight: 400;
+      color: rgba(255,255,255,0.7);
+    }
+
+    .pricing-addon .desc {
+      font-size: 8pt;
+      color: rgba(255,255,255,0.6);
+      margin-top: 2px;
+    }
+
+    /* Bottom CTA */
+    .front-bottom {
+      margin-top: auto;
+      text-align: center;
+      padding-top: 0.15in;
+      border-top: 1px solid #E5E7EB;
+    }
+
+    .cta-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 8px;
+    }
+
+    .cta-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 9pt;
+      color: #1E2A4A;
+    }
+
+    .cta-item strong {
+      font-weight: 600;
+    }
+
+    .cta-svg {
+      flex-shrink: 0;
+    }
+
+    .qr-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .qr-section img {
+      width: 64px;
+      height: 64px;
+    }
+
+    .qr-note {
+      font-size: 8.5pt;
+      color: #6B7280;
+    }
+
+    .front-footer {
+      text-align: center;
+      margin-top: 12px;
+      font-size: 8pt;
+      color: #6B7280;
+    }
+
+    /* ---- BACK SIDE ---- */
+
+    .back {
+      padding: 0.6in 0.65in 0.5in;
+      display: flex;
+      flex-direction: column;
+      min-height: 10.5in;
+    }
+
+    .back-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.25in;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #F3F4F6;
+    }
+
+    .back-header .logo {
+      font-size: 18pt;
+    }
+
+    .back-header-text {
+      font-size: 9pt;
+      color: #6B7280;
+      font-weight: 500;
+    }
+
+    /* FAQ section */
+    .faq-section {
+      margin-bottom: 0.25in;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .faq-item {
+      padding: 12px 14px;
+      background: #F8FAFB;
+      border-radius: 8px;
+      border: 1px solid #E5E7EB;
+    }
+
+    .faq-item h4 {
+      font-size: 8.5pt;
+      font-weight: 600;
+      color: #1E2A4A;
+      margin-bottom: 4px;
+    }
+
+    .faq-item p {
+      font-size: 9pt;
+      color: #4B5563;
+      line-height: 1.45;
+    }
+
+    /* Comparison */
+    .comparison-section {
+      margin-bottom: 0.25in;
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 9pt;
+    }
+
+    .comparison-table th {
+      background: #F3F4F6;
+      padding: 8px 12px;
+      text-align: left;
+      font-weight: 600;
+      color: #1E2A4A;
+      font-size: 8.5pt;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .comparison-table th:first-child {
+      border-radius: 6px 0 0 6px;
+    }
+
+    .comparison-table th:last-child {
+      border-radius: 0 6px 6px 0;
+    }
+
+    .comparison-table td {
+      padding: 7px 12px;
+      border-bottom: 1px solid #F3F4F6;
+      color: #4B5563;
+      font-size: 9pt;
+    }
+
+    .comparison-table td:nth-child(3) {
+      color: #1E2A4A;
+      font-weight: 600;
+    }
+
+    /* Onboarding */
+    .onboarding-section {
+      margin-bottom: 0.2in;
+    }
+
+    .onboarding-box {
+      background: #F3F4F6;
+      border-radius: 10px;
+      padding: 16px 20px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .onboarding-option h4 {
+      font-size: 9pt;
+      font-weight: 600;
+      color: #1E2A4A;
+      margin-bottom: 4px;
+    }
+
+    .onboarding-option p {
+      font-size: 9pt;
+      color: #4B5563;
+      line-height: 1.45;
+    }
+
+    /* Back bottom */
+    .back-bottom {
+      margin-top: auto;
+      text-align: center;
+      padding-top: 0.2in;
+      border-top: 2px solid #1E2A4A;
+    }
+
+    .back-bottom h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 16pt;
+      color: #1E2A4A;
+      margin-bottom: 4px;
+    }
+
+    .back-bottom p {
+      font-size: 9pt;
+      color: #4B5563;
+      margin-bottom: 10px;
+    }
+
+    .back-cta-bar {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .back-cta-item {
+      font-size: 9pt;
+      color: #1E2A4A;
+    }
+
+    .back-cta-item strong {
+      color: #1E2A4A;
+    }
+
+    .back-footer {
+      margin-top: 14px;
+      font-size: 8pt;
+      color: #6B7280;
+    }
+
+    /* Print styles */
+    @media print {
+      body { background: none; }
+      .page { width: 100%; margin: 0; }
+    }
+
+    /* Screen preview helper */
+    @media screen {
+      body {
+        background: #E5E7EB;
+        padding: 20px;
+      }
+      .page {
+        background: #fff;
+        box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===================== FRONT SIDE ===================== -->
+  <div class="page front">
+
+    <!-- Header -->
+    <div class="front-header">
+      <div class="logo"><span class="logo-up">Up</span><span class="logo-riff">riff</span><span class="dot">.</span><span class="tm">&trade;</span></div>
+      <div class="tagline-pill">Managed Marketing Services</div>
+    </div>
+
+    <!-- Hero -->
+    <div class="front-hero">
+      <h1>Your Brand. Your Flow. <em>Let's Riff.</em></h1>
+      <p>We'll keep your marketing flowing — creating content, publishing it, and making it better over time so you can focus on your&nbsp;business.<br>AI&#8209;powered,&nbsp;human&#8209;tuned.</p>
+    </div>
+
+    <!-- Pain points -->
+    <div class="pain-section">
+      <div class="section-label">The Challenge</div>
+      <div class="pain-grid">
+        <div class="pain-card">
+          <h3>No Time</h3>
+          <p>You're running a business. Learning marketing strategy and staying consistent is another full-time job you didn't sign up for.</p>
+        </div>
+        <div class="pain-card">
+          <h3>Budget Doesn't Fit</h3>
+          <p>A good agency can transform your business — but most start at $3K+/month. That's not realistic for every business right now.</p>
+        </div>
+        <div class="pain-card">
+          <h3>AI Didn't Stick</h3>
+          <p>You tried ChatGPT and Canva. It worked for a week. Then you got busy and it stopped. You need consistency, not another tool.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- What's Included -->
+    <div class="included-section">
+      <div class="section-label">What's Included</div>
+      <div class="included-grid">
+        <div class="included-item">
+          <div class="included-check">
+            <svg viewBox="0 0 20 20" fill="#E8634A"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          </div>
+          <div class="included-text">
+            <h4>Content Strategy</h4>
+            <p>We figure out what to post</p>
+          </div>
+        </div>
+        <div class="included-item">
+          <div class="included-check">
+            <svg viewBox="0 0 20 20" fill="#E8634A"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          </div>
+          <div class="included-text">
+            <h4>Social Content</h4>
+            <p>Written in your brand voice</p>
+          </div>
+        </div>
+        <div class="included-item">
+          <div class="included-check">
+            <svg viewBox="0 0 20 20" fill="#E8634A"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          </div>
+          <div class="included-text">
+            <h4>Graphics & Visuals</h4>
+            <p>Branded imagery included</p>
+          </div>
+        </div>
+        <div class="included-item">
+          <div class="included-check">
+            <svg viewBox="0 0 20 20" fill="#E8634A"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          </div>
+          <div class="included-text">
+            <h4>Publishing</h4>
+            <p>Posted to your channels for you</p>
+          </div>
+        </div>
+        <div class="included-item">
+          <div class="included-check">
+            <svg viewBox="0 0 20 20" fill="#E8634A"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          </div>
+          <div class="included-text">
+            <h4>Performance Insights</h4>
+            <p>AI learns what works over time</p>
+          </div>
+        </div>
+        <div class="included-item">
+          <div class="included-check">
+            <svg viewBox="0 0 20 20" fill="#E8634A"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          </div>
+          <div class="included-text">
+            <h4>Your Brand Voice</h4>
+            <p>Sounds like you, not a robot</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- How It Works -->
+    <div class="how-section">
+      <div class="section-label">How It Works</div>
+      <div class="how-steps">
+        <div class="how-step">
+          <div class="step-circle">1</div>
+          <h4>Tell us about your business</h4>
+          <p>One-time setup — not a recurring homework assignment.</p>
+        </div>
+        <div class="how-step">
+          <div class="step-circle">2</div>
+          <h4>Upriff builds your strategy</h4>
+          <p>Strategy, content, and scheduling aligned to your brand.</p>
+        </div>
+        <div class="how-step">
+          <div class="step-circle">3</div>
+          <h4>You focus on your business</h4>
+          <p>Content goes out. Performance is tracked. It gets better over time.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pricing -->
+    <div class="pricing-bar">
+      <div class="pricing-plan">
+        <h4>Rhythm</h4>
+        <div class="price">$499–649<span>/mo</span></div>
+        <div class="desc">3 posts/week &middot; 2 platforms</div>
+      </div>
+      <div class="pricing-divider"></div>
+      <div class="pricing-plan">
+        <h4>Momentum</h4>
+        <div class="price">$749–899<span>/mo</span></div>
+        <div class="desc">5 posts/week &middot; up to 3 platforms</div>
+      </div>
+      <div class="pricing-divider"></div>
+      <div class="pricing-addon">
+        <h4>Amplifier</h4>
+        <div class="price">+$349<span>/mo</span></div>
+        <div class="desc">Ad spend included &middot; Expand your reach</div>
+      </div>
+    </div>
+
+    <!-- Bottom CTA -->
+    <div class="front-bottom">
+      <div class="cta-row">
+        <div class="cta-item">
+          <svg class="cta-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1E2A4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <strong>upriff.io</strong>
+        </div>
+        <div class="cta-item">
+          <svg class="cta-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1E2A4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg>
+          <strong>hello@upriff.io</strong>
+        </div>
+        <div class="cta-item">
+          <svg class="cta-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1E2A4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <strong>(404) 461-9963</strong>
+        </div>
+      </div>
+      <div class="qr-section">
+        <img src="qr-upriff.svg" alt="QR code for upriff.io">
+        <div class="qr-note">Scan to visit upriff.io<br>Or ask me for a free content preview for your business</div>
+      </div>
+      <div class="front-footer">Upriff is a service of Muldrow Marketing &nbsp;&middot;&nbsp; &copy; 2026 Profit Now Solutions, LLC</div>
+    </div>
+
+  </div>
+
+  <!-- ===================== BACK SIDE ===================== -->
+  <div class="page back">
+
+    <div class="back-header">
+      <div class="logo"><span class="logo-up">Up</span><span class="logo-riff">riff</span><span class="dot">.</span><span class="tm">&trade;</span></div>
+      <div class="back-header-text">Frequently Asked Questions & Details</div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="faq-section">
+      <div class="section-label">Common Questions</div>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h4>How is this different from Hootsuite or Buffer?</h4>
+          <p>Those are tools — you still figure out what to post, write it, and schedule it. Upriff is a service. We handle strategy, creation, and publishing for you.</p>
+        </div>
+        <div class="faq-item">
+          <h4>How is this different from an agency?</h4>
+          <p>Agencies build fully custom campaigns with dedicated teams, which is why they cost thousands. Upriff uses AI to deliver consistent, quality marketing at a fraction of the cost.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Will it actually sound like my business?</h4>
+          <p>Yes. We capture your brand voice — your tone, language, and personality — during onboarding. Every piece of content is built from that foundation.</p>
+        </div>
+        <div class="faq-item">
+          <h4>I've tried AI before and it didn't stick.</h4>
+          <p>That's exactly the point. You tried using AI as a tool. With Upriff, we use the AI — it's a service that runs behind the scenes so you don't have to.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Can I review content before it posts?</h4>
+          <p>Absolutely. You can review and approve content, request changes, or let it run hands-off. Upriff works either way.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Is there a long-term contract?</h4>
+          <p>No. Go month-to-month starting at $649/mo, or commit for 6 months at a time starting at $499/mo and save.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Comparison -->
+    <div class="comparison-section">
+      <div class="section-label">How Upriff Compares</div>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>DIY Tools</th>
+            <th>Upriff</th>
+            <th>Agency</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Strategy</td>
+            <td>You figure it out</td>
+            <td>Built in</td>
+            <td>Custom, human-led</td>
+          </tr>
+          <tr>
+            <td>Content</td>
+            <td>You write it</td>
+            <td>AI-generated in your voice</td>
+            <td>Copywriter-crafted</td>
+          </tr>
+          <tr>
+            <td>Publishing</td>
+            <td>You schedule it</td>
+            <td>Done for you</td>
+            <td>Done for you</td>
+          </tr>
+          <tr>
+            <td>Consistency</td>
+            <td>Depends on you</td>
+            <td>Automatic</td>
+            <td>Reliable</td>
+          </tr>
+          <tr>
+            <td>Price</td>
+            <td>$0–50/mo</td>
+            <td>From $499–899/mo</td>
+            <td>$3,000–10,000+/mo</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Onboarding -->
+    <div class="onboarding-section">
+      <div class="section-label">Getting Started</div>
+      <div class="onboarding-box">
+        <div class="onboarding-option">
+          <h4>6-Month Commitment — from $499/mo</h4>
+          <p>Save $150/mo. No onboarding fee, no surprises. Auto-renews — cancel with 30 days' notice.</p>
+        </div>
+        <div class="onboarding-option">
+          <h4>Month-to-Month — from $649/mo</h4>
+          <p>Total flexibility. No contracts, cancel anytime.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom CTA -->
+    <div class="back-bottom">
+      <h2>Upriff your marketing.</h2>
+      <p>Visit upriff.io or reach out directly to get started.</p>
+      <div class="back-footer">
+        Upriff is a service of Muldrow Marketing &nbsp;&middot;&nbsp; &copy; 2026 Profit Now Solutions, LLC &nbsp;&middot;&nbsp; All rights reserved.
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

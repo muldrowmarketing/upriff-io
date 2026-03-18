@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upriff | Your Brand. Your Flow. Let's Riff.</title>
+  <meta name="description" content="Upriff is managed social media marketing powered by AI, guided by humans. Strategy, content, publishing — handled for you at a price that makes sense.">
+  <meta name="keywords" content="small business marketing, social media marketing, AI marketing, affordable social media marketing, done for you social media marketing, social media for small business">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Upriff | Your Brand. Your Flow. Let's Riff.">
+  <meta property="og:description" content="Managed social media marketing powered by AI, guided by humans. Strategy, content, publishing — handled for you at a price that makes sense.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://upriff.io">
+
+  <!-- Favicon placeholder -->
+  <!-- <link rel="icon" href="/favicon.ico"> -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ========================================
+       UPRIFF COLOR PALETTE
+       ========================================
+       Primary:     #1E2A4A  (rich navy — trust, authority)
+       Accent:      #E8634A  (vibrant coral — CTAs, action)
+       Secondary:   #4ECDC4  (cool teal — growth, success)
+       Dark:        #1E2A4A  (rich navy — text, footer)
+       Gray:        #6B7280  (secondary text)
+       Light Gray:  #9CA3AF  (muted text)
+       Background:  #F8FAFB  (cool white)
+       Card BG:     #F3F4F6  (neutral light gray)
+       White:       #FFFFFF
+       ======================================== */
+
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: #1E2A4A;
+      background-color: #F8FAFB;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ---- Typography ---- */
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      line-height: 1.2;
+    }
+
+    h1 {
+      font-size: clamp(2.25rem, 5vw, 3.5rem);
+      font-weight: 700;
+      color: #1E2A4A;
+    }
+
+    h2 {
+      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+      font-weight: 600;
+      color: #1E2A4A;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #1E2A4A;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: #4B5563;
+      font-size: 1.0625rem;
+      line-height: 1.7;
+    }
+
+    /* ---- Layout ---- */
+
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    section {
+      padding: 5rem 0;
+    }
+
+    /* ---- Navigation ---- */
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(30, 42, 74, 0.1);
+      z-index: 100;
+      padding: 1rem 0;
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .logo .logo-up {
+      color: #1E2A4A;
+    }
+
+    .logo .logo-riff {
+      color: #E8634A;
+    }
+
+    .logo span {
+      color: #E8634A;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #4B5563;
+      text-decoration: none;
+      font-size: 0.9375rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #1E2A4A;
+    }
+
+    .nav-cta {
+      background: #E8634A;
+      color: #fff !important;
+      padding: 0.625rem 1.25rem;
+      border-radius: 8px;
+      transition: background 0.2s, transform 0.2s !important;
+    }
+
+    .nav-cta:hover {
+      background: #D4523A;
+      transform: translateY(-1px);
+    }
+
+    /* Mobile nav toggle */
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #1E2A4A;
+      margin: 5px 0;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+
+    /* ---- Buttons ---- */
+
+    .btn-primary {
+      display: inline-block;
+      background: #E8634A;
+      color: #fff;
+      padding: 0.875rem 2rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .btn-primary:hover {
+      background: #D4523A;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      display: inline-block;
+      color: #1E2A4A;
+      font-size: 0.9375rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .btn-secondary:hover {
+      color: #152240;
+    }
+
+    /* ---- Hero ---- */
+
+    .hero {
+      padding: 9rem 0 5rem;
+      text-align: center;
+    }
+
+    .hero-tagline {
+      display: inline-block;
+      background: #1E2A4A;
+      color: #fff;
+      font-size: 0.875rem;
+      font-weight: 600;
+      padding: 0.375rem 1rem;
+      border-radius: 100px;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.025em;
+    }
+
+    .hero h1 {
+      margin-bottom: 1.25rem;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: #E8634A;
+    }
+
+    .hero p {
+      font-size: 1.1875rem;
+      max-width: 640px;
+      margin: 0 auto 2.5rem;
+      color: #6B7280;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    /* ---- Pain Points ---- */
+
+    .pain-points {
+      background: #fff;
+    }
+
+    .pain-points h2 {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .pain-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .pain-card {
+      background: #F8FAFB;
+      border: 1px solid #E5E7EB;
+      border-radius: 12px;
+      padding: 2rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .pain-card:hover {
+      border-color: #E8634A;
+      box-shadow: 0 4px 16px rgba(232, 99, 74, 0.08);
+    }
+
+    .pain-icon {
+      width: 48px;
+      height: 48px;
+      background: #F3F4F6;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+      font-size: 1.5rem;
+    }
+
+    .pain-card h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.0625rem;
+      font-weight: 600;
+      color: #1E2A4A;
+      margin-bottom: 0.75rem;
+    }
+
+    .pain-card p {
+      font-size: 0.9375rem;
+      color: #6B7280;
+    }
+
+    /* ---- The Gap ---- */
+
+    .the-gap {
+      text-align: center;
+    }
+
+    .the-gap h2 {
+      margin-bottom: 1rem;
+    }
+
+    .the-gap > .container > p {
+      max-width: 640px;
+      margin: 0 auto 3rem;
+    }
+
+    .gap-visual {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .gap-item {
+      flex: 1;
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+
+    .gap-item h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .gap-item p {
+      font-size: 0.875rem;
+      color: #9CA3AF;
+    }
+
+    .gap-item.highlight {
+      background: #1E2A4A;
+      border-radius: 12px;
+      padding: 2.5rem 2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .gap-item.highlight h3 {
+      color: #fff;
+      font-size: 1.125rem;
+    }
+
+    .gap-item.highlight p {
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .gap-line {
+      position: absolute;
+      top: 50%;
+      left: 25%;
+      right: 25%;
+      height: 2px;
+      background: #E5E7EB;
+      z-index: 0;
+    }
+
+    /* ---- What Is Upriff ---- */
+
+    .what-is {
+      background: #fff;
+    }
+
+    .what-is-header {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .what-is-intro {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 3.5rem;
+    }
+
+    .pillar-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .pillar-card {
+      padding: 2rem;
+      border-radius: 12px;
+      background: #F8FAFB;
+      border: 1px solid #E5E7EB;
+    }
+
+    .pillar-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background: #E8634A;
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.875rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .pillar-card h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.0625rem;
+      font-weight: 600;
+      color: #1E2A4A;
+      margin-bottom: 0.75rem;
+    }
+
+    .pillar-card p {
+      font-size: 0.9375rem;
+      color: #6B7280;
+    }
+
+    /* ---- How It Works ---- */
+
+    .how-it-works {
+      text-align: center;
+    }
+
+    .how-it-works h2 {
+      margin-bottom: 0.5rem;
+    }
+
+    .how-subtitle {
+      color: #6B7280;
+      margin-bottom: 3.5rem;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .step {
+      text-align: center;
+      padding: 0 1rem;
+      position: relative;
+    }
+
+    .step-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: #E8634A;
+      color: #fff;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+    }
+
+    .step h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.0625rem;
+      font-weight: 600;
+      color: #1E2A4A;
+      margin-bottom: 0.75rem;
+    }
+
+    .step p {
+      font-size: 0.9375rem;
+      color: #6B7280;
+    }
+
+    /* Connector lines between steps */
+    .step:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      top: 28px;
+      right: -1rem;
+      width: calc(2rem);
+      height: 2px;
+      background: linear-gradient(90deg, #E8634A, #1E2A4A);
+      opacity: 0.3;
+    }
+
+    /* ---- What's Included ---- */
+
+    .included {
+      background: #fff;
+    }
+
+    .included h2 {
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .included-subtitle {
+      text-align: center;
+      color: #6B7280;
+      margin-bottom: 3.5rem;
+    }
+
+    .included-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+
+    .included-item {
+      flex: 0 1 calc(33.333% - 1rem);
+      min-width: 280px;
+    }
+
+    .included-item {
+      padding: 1.75rem;
+      border: 1px solid #E5E7EB;
+      border-radius: 12px;
+      transition: border-color 0.2s;
+    }
+
+    .included-item:hover {
+      border-color: #E8634A;
+    }
+
+    .included-icon {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .included-item h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #1E2A4A;
+      margin-bottom: 0.5rem;
+    }
+
+    .included-item p {
+      font-size: 0.875rem;
+      color: #6B7280;
+      line-height: 1.6;
+    }
+
+    /* ---- Pricing ---- */
+
+    .pricing {
+      text-align: center;
+    }
+
+    .pricing h2 {
+      margin-bottom: 0.5rem;
+    }
+
+    .pricing-subtitle {
+      color: #6B7280;
+      margin-bottom: 2rem;
+    }
+
+    /* Commitment toggle */
+    .commitment-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .commitment-toggle label {
+      font-size: 0.9375rem;
+      font-weight: 500;
+      color: #9CA3AF;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .commitment-toggle label.active {
+      color: #1E2A4A;
+      font-weight: 600;
+    }
+
+    .toggle-switch {
+      position: relative;
+      width: 48px;
+      height: 26px;
+      background: #E5E7EB;
+      border-radius: 100px;
+      cursor: pointer;
+      transition: background 0.2s;
+      border: none;
+      padding: 0;
+    }
+
+    .toggle-switch.on {
+      background: #1E2A4A;
+    }
+
+    .toggle-switch::after {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 20px;
+      height: 20px;
+      background: #fff;
+      border-radius: 50%;
+      transition: transform 0.2s;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    }
+
+    .toggle-switch.on::after {
+      transform: translateX(22px);
+    }
+
+    .commitment-save {
+      font-size: 0.8125rem;
+      color: #4ECDC4;
+      font-weight: 600;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+    }
+
+    .pricing-card {
+      background: #fff;
+      border: 2px solid #E5E7EB;
+      border-radius: 16px;
+      padding: 2.5rem 2rem;
+      text-align: left;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .pricing-card:hover {
+      border-color: #1E2A4A;
+      box-shadow: 0 8px 24px rgba(30, 42, 74, 0.1);
+    }
+
+    .pricing-card.featured {
+      border-color: #1E2A4A;
+      position: relative;
+    }
+
+    .pricing-badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #1E2A4A;
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.25rem 1rem;
+      border-radius: 100px;
+      letter-spacing: 0.025em;
+    }
+
+    .pricing-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.375rem;
+      font-weight: 600;
+      color: #1E2A4A;
+      margin-bottom: 0.25rem;
+    }
+
+    .pricing-tagline {
+      font-size: 0.875rem;
+      color: #9CA3AF;
+      margin-bottom: 1.5rem;
+    }
+
+    .pricing-price {
+      margin-bottom: 1.5rem;
+    }
+
+    .pricing-amount {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #1E2A4A;
+    }
+
+    .pricing-period {
+      font-size: 1rem;
+      color: #9CA3AF;
+    }
+
+    .pricing-features {
+      list-style: none;
+      margin-bottom: 2rem;
+    }
+
+    .pricing-features li {
+      padding: 0.5rem 0;
+      font-size: 0.9375rem;
+      color: #4B5563;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.625rem;
+    }
+
+    .pricing-features li::before {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      min-width: 20px;
+      background: #FEF2EF;
+      border-radius: 50%;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23E8634A'%3E%3Cpath fill-rule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clip-rule='evenodd'/%3E%3C/svg%3E");
+      margin-top: 2px;
+    }
+
+    .pricing-card .btn-primary {
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Amplifier toggle inside pricing cards */
+    .amplifier-toggle {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.5rem;
+      background: #F3F4F6;
+      border: 2px solid #E5E7EB;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: border-color 0.2s;
+    }
+
+    .amplifier-toggle:hover {
+      border-color: #E8634A;
+    }
+
+    .amplifier-toggle:has(input:checked) {
+      border-color: #1E2A4A;
+      background: #EEF0F4;
+    }
+
+    .amp-checkbox {
+      width: 18px;
+      height: 18px;
+      accent-color: #1E2A4A;
+      cursor: pointer;
+      margin-right: 0.5rem;
+    }
+
+    .amp-toggle-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: #1E2A4A;
+    }
+
+    .amp-toggle-price {
+      color: #E8634A;
+      font-weight: 600;
+    }
+
+    .amp-toggle-desc {
+      width: 100%;
+      font-size: 0.8125rem;
+      color: #6B7280;
+      padding-left: 1.75rem;
+    }
+
+    /* Amplifier add-on banner */
+    .amplifier {
+      max-width: 800px;
+      margin: 0 auto;
+      background: linear-gradient(135deg, #1E2A4A, #142038);
+      border-radius: 16px;
+      padding: 2.5rem 3rem;
+      text-align: center;
+      color: #fff;
+    }
+
+    .amplifier-content h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.375rem;
+      color: #fff;
+      margin-bottom: 0.25rem;
+    }
+
+    .amplifier-price {
+      font-size: 0.9375rem;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 0.75rem;
+    }
+
+    .amplifier-content p {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 0.9375rem;
+      max-width: 540px;
+      margin: 0 auto;
+    }
+
+    .amplifier .btn-primary {
+      background: #E8634A;
+      white-space: nowrap;
+    }
+
+    .amplifier .btn-primary:hover {
+      background: #D4523A;
+    }
+
+    /* Onboarding note */
+    .onboarding-note {
+      margin-top: 2.5rem;
+      padding: 1.5rem 2rem;
+      background: #F3F4F6;
+      border-radius: 12px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .onboarding-note h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #1E2A4A;
+      margin-bottom: 0.5rem;
+    }
+
+    .onboarding-note p {
+      font-size: 0.9375rem;
+      color: #4B5563;
+    }
+
+    /* ---- FAQ ---- */
+
+    .faq {
+      background: #fff;
+    }
+
+    .faq h2 {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .faq-list {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #E5E7EB;
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 1.5rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      text-align: left;
+    }
+
+    .faq-question span {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.0625rem;
+      font-weight: 600;
+      color: #1E2A4A;
+      padding-right: 1rem;
+    }
+
+    .faq-question .faq-icon {
+      font-size: 1.5rem;
+      color: #1E2A4A;
+      transition: transform 0.3s;
+      flex-shrink: 0;
+    }
+
+    .faq-item.active .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 200px;
+      padding-bottom: 1.5rem;
+    }
+
+    .faq-answer p {
+      font-size: 0.9375rem;
+      color: #6B7280;
+    }
+
+    /* ---- CTA Section ---- */
+
+    .final-cta {
+      text-align: center;
+      padding: 6rem 0;
+    }
+
+    .final-cta h2 {
+      margin-bottom: 1rem;
+    }
+
+    .final-cta p {
+      font-size: 1.125rem;
+      color: #6B7280;
+      margin-bottom: 2.5rem;
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Dual CTA */
+    .dual-cta {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .cta-card {
+      padding: 2.5rem 2rem;
+      border-radius: 16px;
+      text-align: center;
+    }
+
+    .cta-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      color: #1E2A4A;
+      margin-bottom: 0.75rem;
+    }
+
+    .cta-card p {
+      font-size: 0.9375rem;
+      color: #6B7280;
+      margin-bottom: 1.5rem;
+      max-width: 100%;
+    }
+
+    .cta-primary-card {
+      background: #fff;
+      border: 2px solid #1E2A4A;
+      box-shadow: 0 8px 24px rgba(30, 42, 74, 0.1);
+    }
+
+    .cta-secondary-card {
+      background: #F8FAFB;
+      border: 1px solid #E5E7EB;
+    }
+
+    .cta-note {
+      display: block;
+      margin-top: 0.75rem;
+      font-size: 0.8125rem;
+      color: #9CA3AF;
+    }
+
+    .btn-outline {
+      display: inline-block;
+      background: transparent;
+      color: #1E2A4A;
+      padding: 0.875rem 2rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      border: 2px solid #1E2A4A;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s, transform 0.2s;
+    }
+
+    .btn-outline:hover {
+      background: #1E2A4A;
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    /* ---- Footer ---- */
+
+    footer {
+      background: #1E2A4A;
+      color: rgba(255, 255, 255, 0.6);
+      padding: 3rem 0;
+      text-align: center;
+    }
+
+    .footer-logo {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-logo .logo-up {
+      color: #fff;
+    }
+
+    .footer-logo .logo-riff {
+      color: #E8634A;
+    }
+
+    .footer-logo span {
+      color: #E8634A;
+    }
+
+    footer p {
+      font-size: 0.8125rem;
+      color: rgba(255, 255, 255, 0.4);
+      margin-bottom: 0.25rem;
+    }
+
+    footer a {
+      color: rgba(255, 255, 255, 0.6);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    footer a:hover {
+      color: #fff;
+    }
+
+    /* ---- Responsive ---- */
+
+    @media (max-width: 768px) {
+      section {
+        padding: 3.5rem 0;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        flex-direction: column;
+        padding: 1.5rem;
+        gap: 1rem;
+        border-bottom: 1px solid #E5E7EB;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-toggle {
+        display: block;
+      }
+
+      .pain-grid,
+      .pillar-grid,
+      .steps,
+      .included-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pricing-grid,
+      .dual-cta {
+        grid-template-columns: 1fr;
+      }
+
+      .step:not(:last-child)::after {
+        display: none;
+      }
+
+      .gap-visual {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .gap-line {
+        display: none;
+      }
+
+      .amplifier {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1.5rem;
+      }
+
+      .amplifier-content p {
+        max-width: 100%;
+      }
+
+      .hero {
+        padding: 7rem 0 3rem;
+      }
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .pain-grid,
+      .included-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .pain-grid .pain-card:last-child {
+        grid-column: 1 / -1;
+        max-width: 50%;
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="container nav-inner">
+      <a href="#" class="logo"><span class="logo-up">Up</span><span class="logo-riff">riff</span><span>.</span><sup style="font-size:0.45em;vertical-align:super;color:#9CA3AF">&trade;</sup></a>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#whats-included">What's Included</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#get-started" class="nav-cta">Get Started</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-tagline">Managed Marketing Services</div>
+      <h1>Your Brand. Your Flow. <em>Let's Riff.</em></h1>
+      <p>We'll keep your marketing flowing — creating content, publishing it,<br>and making it better over time so you can focus on your business.<br>AI-powered, human-tuned.</p>
+      <div class="hero-actions">
+        <a href="#get-started" class="btn-primary">Get Started with Upriff</a>
+        <a href="#talk-to-us" class="btn-secondary">Let's talk first &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pain Points -->
+  <section class="pain-points">
+    <div class="container">
+      <h2>You know you need marketing.<br>You just don't have time for it.</h2>
+      <div class="pain-grid">
+        <div class="pain-card">
+          <div class="pain-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1E2A4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <h3>The Time Problem</h3>
+          <p>You're running a business. Learning marketing strategy, writing posts, and staying consistent is another full-time job you didn't sign up for.</p>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1E2A4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+          <h3>The Budget Problem</h3>
+          <p>A good marketing agency can transform your business — but most start at $3,000 to $10,000 a month. If that's not in the budget right now, you shouldn't have to go without marketing entirely.</p>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1E2A4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9.5" cy="16" r="1"/><circle cx="14.5" cy="16" r="1"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div>
+          <h3>The AI Problem</h3>
+          <p>You've tried ChatGPT, Canva, maybe even a scheduling tool. It worked for a week. Then you got busy and it all stopped. Sound familiar?</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Gap -->
+  <section class="the-gap">
+    <div class="container">
+      <h2>There's a gap. Upriff fills it.</h2>
+      <p>Most marketing options either put the work on you or require a budget built for larger businesses. Upriff is managed marketing powered by AI and guided by humans — a full-service experience at a price that makes sense.</p>
+      <div class="gap-visual">
+        <div class="gap-line"></div>
+        <div class="gap-item">
+          <h3>DIY Tools</h3>
+          <p>You do everything<br>$0–50/mo</p>
+        </div>
+        <div class="gap-item highlight">
+          <h3>Upriff</h3>
+          <p>We handle it — AI-powered, human-guided<br>Near-DIY pricing</p>
+        </div>
+        <div class="gap-item">
+          <h3>Full-Service Agency</h3>
+          <p>Dedicated team<br>$3–10K+/mo</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What Is Upriff -->
+  <section class="what-is">
+    <div class="container">
+      <div class="what-is-header">
+        <h2>Your marketing, handled.</h2>
+      </div>
+      <p class="what-is-intro">Upriff is a managed marketing suite built by Muldrow Marketing. We use AI to handle the heavy lifting — figuring out what to post, creating the content, publishing it on your behalf, and learning what works over time.</p>
+      <div class="pillar-grid">
+        <div class="pillar-card">
+          <div class="pillar-number">1</div>
+          <h3>Strategy Without the Guesswork</h3>
+          <p>We don't wait for you to come up with ideas. Upriff builds a content strategy based on your brand, your industry, and what your customers are searching for.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-number">2</div>
+          <h3>Consistency Without the Effort</h3>
+          <p>The #1 reason small business marketing fails is inconsistency. Upriff keeps your marketing moving — planning, creating, and publishing stay on track.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-number">3</div>
+          <h3>Full-Service Feel, Fraction of the Cost</h3>
+          <p>You get strategy, content creation, publishing, and performance insights — the core elements of any strong marketing program — at a price that works for your business.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <h2>How It Works</h2>
+      <p class="how-subtitle">Three steps. That's it.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Tell us about your business</h3>
+          <p>We learn your brand, your voice, your services, and your goals. This is a one-time setup — not a recurring homework assignment.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Upriff builds your strategy</h3>
+          <p>We create a content strategy, generate posts aligned to your brand voice, and schedule them across your channels — powered by AI, reviewed by humans.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>You focus on your business</h3>
+          <p>Content goes out. Performance gets tracked. The system learns what works and gets better over time. You stay focused on what matters.</p>
+        </div>
+      </div>
+      <a href="#get-started" class="btn-primary">Get Started with Upriff</a>
+    </div>
+  </section>
+
+  <!-- What's Included -->
+  <section class="included" id="whats-included">
+    <div class="container">
+      <h2>What's Included</h2>
+      <p class="included-subtitle">Everything you need. Nothing you have to figure out.</p>
+      <div class="included-grid">
+        <div class="included-item">
+          <div class="included-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E8634A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+          <h3>Content Strategy</h3>
+          <p>AI-driven topic planning based on your brand, industry, and what your audience is searching for.</p>
+        </div>
+        <div class="included-item">
+          <div class="included-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E8634A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
+          <h3>Social Media Content</h3>
+          <p>Posts created in your brand voice across Instagram, Facebook, LinkedIn, and more.</p>
+        </div>
+        <div class="included-item">
+          <div class="included-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E8634A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></div>
+          <h3>Publishing</h3>
+          <p>Content published directly to your channels — you don't have to touch a scheduling tool.</p>
+        </div>
+        <div class="included-item">
+          <div class="included-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E8634A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+          <h3>Performance Insights</h3>
+          <p>We track what's working and the system adapts. Better results over time, automatically.</p>
+        </div>
+        <div class="included-item">
+          <div class="included-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E8634A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div>
+          <h3>Your Brand Voice</h3>
+          <p>Your content sounds like you — not like a robot. We capture your tone, personality, and vocabulary from day one.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <h2>Simple, Transparent Pricing</h2>
+      <p class="pricing-subtitle">Marketing that fits your budget — and actually gets done.</p>
+
+      <div class="commitment-toggle">
+        <label id="label-m2m" onclick="setCommitment(false)">Month-to-month</label>
+        <button class="toggle-switch on" id="commitment-switch" onclick="toggleCommitment()" aria-label="Toggle commitment period"></button>
+        <label id="label-6mo" class="active" onclick="setCommitment(true)">6-month term</label>
+        <span class="commitment-save" id="save-badge">Save $150/mo</span>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Rhythm -->
+        <div class="pricing-card">
+          <div class="pricing-name">Rhythm</div>
+          <div class="pricing-tagline">The essentials, handled.</div>
+          <div class="pricing-price">
+            <span class="pricing-amount" data-m2m="$649" data-6mo="$499">$499</span>
+            <span class="pricing-period">/month</span>
+          </div>
+          <ul class="pricing-features">
+            <li>3 posts per week</li>
+            <li>Cross-posted to 2 platforms</li>
+            <li>Content strategy &amp; topic planning</li>
+            <li>Brand voice content</li>
+            <li>Graphics &amp; visual enhancements</li>
+            <li>Direct publishing &amp; scheduling</li>
+            <li>Performance tracking &amp; AI insights</li>
+          </ul>
+          <label class="amplifier-toggle">
+            <input type="checkbox" class="amp-checkbox" data-plan="rhythm" onchange="updatePricing()">
+            <span class="amp-toggle-label">Add Amplifier <span class="amp-toggle-price">+$349/mo</span></span>
+            <span class="amp-toggle-desc">We'll promote your best content with paid ads. Ad spend included.</span>
+          </label>
+          <a href="https://links.muldrowmarketing.com/payment-link/69ae37a31934f977385d47cc" class="btn-primary checkout-link" data-plan="rhythm"
+            data-m2m="https://links.muldrowmarketing.com/payment-link/69ae377984b2d77c90635a80"
+            data-6mo="https://links.muldrowmarketing.com/payment-link/69ae37a31934f977385d47cc"
+            data-m2m-amp="https://links.muldrowmarketing.com/payment-link/69b382698e8f54b631536d6f"
+            data-6mo-amp="https://links.muldrowmarketing.com/payment-link/69b382918e8f54b631536d70">Get Started</a>
+        </div>
+
+        <!-- Momentum -->
+        <div class="pricing-card featured">
+          <div class="pricing-badge">Most Popular</div>
+          <div class="pricing-name">Momentum</div>
+          <div class="pricing-tagline">More content, more reach.</div>
+          <div class="pricing-price">
+            <span class="pricing-amount" data-m2m="$899" data-6mo="$749">$749</span>
+            <span class="pricing-period">/month</span>
+          </div>
+          <ul class="pricing-features">
+            <li>5 posts per week</li>
+            <li>Cross-posted to up to 3 platforms</li>
+            <li>Everything in Rhythm</li>
+            <li>Monthly strategy summary</li>
+            <li>Priority seasonal planning</li>
+          </ul>
+          <label class="amplifier-toggle">
+            <input type="checkbox" class="amp-checkbox" data-plan="momentum" onchange="updatePricing()">
+            <span class="amp-toggle-label">Add Amplifier <span class="amp-toggle-price">+$349/mo</span></span>
+            <span class="amp-toggle-desc">We'll promote your best content with paid ads. Ad spend included.</span>
+          </label>
+          <a href="https://links.muldrowmarketing.com/payment-link/69ae373c1e61217daa7afa3b" class="btn-primary checkout-link" data-plan="momentum"
+            data-m2m="https://links.muldrowmarketing.com/payment-link/69ae36aa1e6121705c7af9ce"
+            data-6mo="https://links.muldrowmarketing.com/payment-link/69ae373c1e61217daa7afa3b"
+            data-m2m-amp="https://links.muldrowmarketing.com/payment-link/69b380618e8f54b631536d6b"
+            data-6mo-amp="https://links.muldrowmarketing.com/payment-link/69b38116a42ad4304da7a2bb">Get Started</a>
+        </div>
+      </div>
+
+      <!-- Amplifier -->
+      <div class="amplifier">
+        <div class="amplifier-content">
+          <h3>Amplifier Add-On</h3>
+          <div class="amplifier-price">+$349/mo &middot; Ad spend included</div>
+          <p>We'll promote your best content to reach new people in your target market. No ad accounts to manage, no separate budgets. Just more eyes on your brand.</p>
+        </div>
+      </div>
+
+      <!-- Commitment note -->
+      <div class="onboarding-note">
+        <h3>Commit for 6 Months, Save $150/mo</h3>
+        <p>Lock in the lower rate with a 6-month commitment — no onboarding fee, no surprises — or go month-to-month for total flexibility at a slightly higher rate. Either way, no long-term contracts.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+            <span>How is Upriff different from tools like Hootsuite or Buffer?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Those are tools — you still have to figure out what to post, write it, and schedule it. Upriff is a service. We handle the strategy, creation, and publishing for you.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+            <span>How is this different from hiring a marketing agency?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Traditional agencies build fully custom campaigns with dedicated teams. That's why they cost thousands per month. Upriff gives you a full-service experience powered by AI and guided by humans, which means consistent, quality marketing at a fraction of the cost.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+            <span>Will the content actually sound like my business?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. We start by capturing your brand voice — your tone, your language, your personality. Every piece of content is generated from that foundation, not from generic templates.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+            <span>What if I want to review content before it goes out?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Absolutely. You can review and approve content, request changes, or just let it run. Upriff works either way — hands-on or hands-off.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+            <span>What platforms do you publish to?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Instagram, Facebook, LinkedIn, Google Business Profile, and more. We'll set up the channels that make sense for your business.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+            <span>Is there a long-term contract?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>No. You can go month-to-month for total flexibility at a slightly higher rate, or commit for 6 months at a time and save $150/month. Your 6-month plan renews automatically so your marketing never skips a beat. To cancel, just let us know at least 30 days before your next renewal.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+            <span>I've tried AI for marketing before and it didn't work. How is this different?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>That's exactly the point. You tried doing it yourself with AI as a tool. With Upriff, you don't use the AI — we do. It's a service that runs behind the scenes so you don't have to think about it.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA: Get Started -->
+  <section class="final-cta" id="get-started">
+    <div class="container">
+      <h2>Your business deserves consistent marketing.<br>You deserve to not worry about it.</h2>
+      <p>Upriff your marketing.</p>
+
+      <div class="dual-cta">
+        <!-- Path 1: Ready to Start -->
+        <div class="cta-card cta-primary-card">
+          <h3>Ready to get started?</h3>
+          <p>Choose your plan and start your onboarding — your first content will be in the works within days.</p>
+          <a href="#pricing" class="btn-primary" style="width:100%;text-align:center;">Choose Your Plan &rarr;</a>
+          <span class="cta-note">6-month commitment = save $150/mo</span>
+        </div>
+
+        <!-- Path 2: Let's Talk First -->
+        <div class="cta-card cta-secondary-card" id="talk-to-us">
+          <h3>Want to learn more first?</h3>
+          <p>Book a quick 15-minute call. We'll learn about your business and show you what Upriff would look like for you.</p>
+          <!--
+            ============================================
+            GHL FORM OR CALENDAR EMBED
+            ============================================
+            Option A: Embed GHL form here
+            <iframe src="https://link.yourghl.com/widget/form/FORM_ID"
+                    style="width:100%;height:400px;border:none;">
+            </iframe>
+
+            Option B: Link to GHL calendar booking page
+            <a href="https://link.yourghl.com/widget/booking/CALENDAR_ID">
+            ============================================
+          -->
+          <a href="https://links.muldrowmarketing.com/widget/form/wQb91ZIFCdL9snzSY3zV" class="btn-outline" style="width:100%;text-align:center;">Book a Free Call &rarr;</a>
+          <span class="cta-note">15 minutes. No pressure. No obligation.</span>
+        </div>
+      </div>
+      <p style="margin-top: 2rem; font-size: 0.875rem; color: #9CA3AF;">No long-term contracts. No complexity. No figuring it out yourself.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-logo"><span class="logo-up">Up</span><span class="logo-riff">riff</span><span>.</span><sup style="font-size:0.45em;vertical-align:super;color:rgba(255,255,255,0.3)">&trade;</sup></div>
+      <p>Upriff is a service of <a href="https://muldrowmarketing.com" target="_blank" rel="noopener">Muldrow Marketing</a></p>
+      <p style="margin-top: 0.5rem;"><a href="mailto:hello@upriff.io">hello@upriff.io</a> &nbsp;&middot;&nbsp; <a href="tel:+14044619963">(404) 461-9963</a></p>
+      <p style="margin-top: 0.75rem;"><a href="/terms.html">Terms of Service</a> &nbsp;&middot;&nbsp; <a href="/privacy.html">Privacy Policy</a></p>
+      <p>&copy; 2026 Profit Now Solutions, LLC. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Commitment toggle logic — defaults to 6-month
+    var is6Month = true;
+
+    function setCommitment(sixMonth) {
+      is6Month = sixMonth;
+      updateToggleUI();
+      updatePricing();
+    }
+
+    function toggleCommitment() {
+      is6Month = !is6Month;
+      updateToggleUI();
+      updatePricing();
+    }
+
+    function updateToggleUI() {
+      var sw = document.getElementById('commitment-switch');
+      var labelM2M = document.getElementById('label-m2m');
+      var label6Mo = document.getElementById('label-6mo');
+      var badge = document.getElementById('save-badge');
+
+      if (is6Month) {
+        sw.classList.add('on');
+        labelM2M.classList.remove('active');
+        label6Mo.classList.add('active');
+        badge.style.display = 'inline';
+      } else {
+        sw.classList.remove('on');
+        labelM2M.classList.add('active');
+        label6Mo.classList.remove('active');
+        badge.style.display = 'none';
+      }
+    }
+
+    function updatePricing() {
+      // Update checkout links (considering amplifier checkbox)
+      var links = document.querySelectorAll('.checkout-link');
+      links.forEach(function(link) {
+        var plan = link.dataset.plan;
+        var ampCheckbox = document.querySelector('.amp-checkbox[data-plan="' + plan + '"]');
+        var hasAmp = ampCheckbox && ampCheckbox.checked;
+
+        if (hasAmp) {
+          link.href = is6Month ? link.dataset['6moAmp'] : link.dataset.m2mAmp;
+        } else {
+          link.href = is6Month ? link.dataset['6mo'] : link.dataset.m2m;
+        }
+      });
+
+      // Update displayed prices
+      var prices = document.querySelectorAll('.pricing-amount[data-m2m]');
+      prices.forEach(function(el) {
+        el.textContent = is6Month ? el.dataset['6mo'] : el.dataset.m2m;
+      });
+    }
+  </script>
+
+</body>
+</html>
